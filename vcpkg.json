@@ -1,0 +1,12 @@
+{
+  "dependencies" : [ {
+    "name" : "boost-filesystem",
+    "version>=" : "1.85.0#2"
+  }, {
+    "name" : "openssl",
+    "version>=" : "3.3.0#1"
+  }, {
+    "name" : "argparse",
+    "version>=" : "3.0"
+  } ]
+}
