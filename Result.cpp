@@ -14,5 +14,6 @@ std::ostream& operator<<(std::ostream& out, const Result& curr) {
     for(auto byte : curr.block_data){
         out << std::setw(2) << std::setfill('0') << std::hex << (int)byte;
     }
+    out << std::dec << std::resetiosflags(std::ios_base::adjustfield); //возврат cout к исходному состоянию
     return out;
 }
