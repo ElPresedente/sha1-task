@@ -9,6 +9,7 @@
 #include <array>
 #include <fstream>
 #include <iomanip>
+#include <cstdint>
 
 struct Result{
     using hash_t = std::array<uint8_t, 20>;
