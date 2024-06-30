@@ -6,7 +6,6 @@
 #define SHA1_TASK_APPLICATION_HPP
 
 #include <string>
-#include <utility>
 #include <array>
 #include <cstdint>
 #include <queue>
@@ -14,6 +13,11 @@
 #include <fstream>
 #include <random>
 #include <algorithm>
+
+#ifndef NDEBUG
+#include <iostream>
+#endif
+
 
 #include <boost/filesystem.hpp>
 #include <boost/range/iterator_range.hpp>
@@ -36,9 +40,9 @@ public:
 private:
     static hash_t sha1(void* mem, size_t size);
 
-    static Result process_file(const fs::path& file);
+    static Result process_file(const fs::path& file, int time_limit);
 
-
+    static int count_zeros(const hash_t& hash);
 
     std::ofstream file_out;
 
